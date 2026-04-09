@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prodesk IT Landing Page</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/style1.css"></head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <a href="#">
+            <img src="logo.jfif" alt="logo">
+            <h1 class="logo-text">PRODESK IT</h1>
+        </a>
+    </div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="nav-right">
+        <button class="togglebutton" onclick="toggleDark()">Dark</button>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="navbar-links" id="mobileMenu">
+
+    <!-- ✅ CLOSE BUTTON -->
+    <div class="close-btn" onclick="toggleMenu()">✖</div>
+
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="herosection">
+    <h1>We Build Digial Experiences</h1>
+    <p>Your growth is our mission. Let's levelUp together!</p>
+    <button class="button">Get Started</button>
+</section>
+
+<!-- SERVICES -->
+<section class="servicessection">
+    <h2>Our Services</h2>
+
+    <div class="servicegrid">
+        <div class="service">
+            <h3>SEO Optimization</h3><br />
+            <p>SEO boosts visibility by combining high-quality, keyword-rich content with technical performance like fast speeds and mobile responsiveness. By earning backlinks from authoritative sites, you build trust with search engines. This holistic approach improves organic rankings, driving sustainable, long-term traffic to your website.</p>
+        </div>
+
+        <div class="service">
+            <h3>Web Development</h3><br />
+            <p>Modern, responsive and scalable websites. Modern websites combine component-based frameworks for sleek design with fluid grids for total responsiveness across devices. Scalability is achieved through cloud hosting and CDNs, ensuring high performance as traffic grows. This synergy creates a fast, accessible, and future-proof digital presence.</p>
+        </div>
+
+        <div class="service">
+            <h3>Digital Marketing</h3><br />
+            <p>Grow your audience and increase conversions.Boost growth by targeting high-intent audiences through data-driven content and SEO. Maximize conversions using A/B testing, persuasive CTA placement, and streamlined UX. By aligning social proof with personalized marketing funnels, you transform passive viewers into loyal customers, ensuring scalable revenue and long-term brand authority.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>Follow Us</p>
+
+    <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+
+    <p style="margin-top:10px;">© 2026 Prodesk IT</p>
+</footer>
+
+<script>
+const menu = document.getElementById("mobileMenu");
+
+function toggleMenu(){
+    menu.classList.toggle("active");
+}
+
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+
+document.querySelectorAll("#mobileMenu a").forEach(link=>{
+    link.addEventListener("click",()=>{
+        menu.classList.remove("active");
+    });
+});
+</script>
+
+</body>
+</html>
